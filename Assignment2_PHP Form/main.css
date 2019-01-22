@@ -3,8 +3,9 @@ body {
     background: #666666;
 }
 main {
-    width: 450px;
+    width: 500px;
     margin: 0 auto;
+    height: 350px;
     padding: 20px;
     background: #FFFFFF;
     border: 2px solid #000000;
@@ -18,15 +19,14 @@ p {
     margin: .5em 0;
 }
 fieldset {
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: .5em;
     padding-left: 1em;
 }
 label {
-    width: 10em;
+    width: 20em;
     float: left;
     margin-right: 1em;
-    text-align: right;
     margin-bottom: .2em;
 }
 input {
@@ -37,6 +37,15 @@ br {
     margin-bottom: .2em;
 }
 .textbox {
-    width: 15em;
+    width: 25em;
     margin-bottom: .2em;
+}
+
+#nameReq,#emailReq {
+    color: #FF0000;
+    margin:0 auto;
+}
+
+#rbutton, #sbutton {
+    font-size:16px;
 }

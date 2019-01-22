@@ -1,56 +1,41 @@
 <?php
     // get the data from the form
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+   // $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+    $name = $_GET['name'];
+    $email = $_GET['email'];
+    $phone = $_GET['phone'];
+    $state = $_GET['state'];
     
-$name = $_GET['name'];
-$email = $_GET['email'];
-$phone = $_GET['phone'];
-$state = $_GET['state'];
 
-echo "<ul>
-        <li>Name: ".$name."</li>
-        <li>Email: ".$email."</li>
-        <li>Phone: ".$phone."</li>
-        <li>State: ".$state."</li>
-    </ul>";
 
-    // get the rest of the data for the form
+?>    
 
-    // for the heard_from radio buttons,
-    // display a value of 'Unknown' if the user doesn't select a radio button
 
-    // for the wants_updates check box,
-    // display a value of 'Yes' or 'No'
-?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Account Information</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
-<body>
+<?php 
+    echo"
     <main>
-        <h1>Account Information</h1>
+        <h1>Account Information</h1><br>
+        
+        <label>Name: ".$name." </label>
+        <span></span><br>
 
-        <label>Email Address:</label>
+        <label>Email Address:  ".$email."</label>
         <span><?php echo htmlspecialchars($email); ?></span><br>
 
-        <br>
+        <label>Phone Number:  ".$phone."</label>
+        <span></span><br> 
 
-        <label>Phone Number:</label>
+        <label>State of Residence: ".$state."</label>
         <span></span><br>
-
-        <label>Heard From:</label>
-        <span></span><br>
-
-        <label>Send Updates:</label>
-        <span></span><br>
-
-        <label>Contact Via:</label>
-        <span></span><br><br>
-
-        <span>Comments:</span><br>
-        <span></span><br>        
-    </main>
+      
+    </main>" ?>
+<body>
 </body>
 </html>
